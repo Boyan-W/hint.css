@@ -17,6 +17,8 @@
 	&:before, &:after {
 		position: absolute;
 		opacity: 0;
+		// IE 8
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 		z-index: 1000000;
 		// shouldn't receive pointer events, otherwise even hovering tooltip will make it appear
 		pointer-events: none;
@@ -29,6 +31,8 @@
 
 	&:hover:before, &:hover:after {
 		opacity: 1;
+		// IE 8
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	}
 
 	/**

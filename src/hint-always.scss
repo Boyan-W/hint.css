@@ -20,6 +20,9 @@
 .hint--always {
 	&:after, &:before {
 		opacity: 1;
+		// IE 8
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+
 	}
 
 	&.hint--top {
